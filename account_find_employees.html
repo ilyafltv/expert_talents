@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Employees</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/find_employees.css">
+    <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+    <!-- Popup loading with script(Components/Popup.js) -->
+    <div class="popup popup-closed" id="popup"></div>
+
+    <header>    
+        <!-- Menu -->
+        <div class="container">
+            <nav class="header__navbar">
+                <ul>
+                    <li class="header__navbar__logo"><a href="index.html"><img src="images/Logo.svg"></img></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="find_employees.html">Find Employees</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+
+                <div class="header__navbar__buttons">
+                    <span>Username</span>
+                    <button class="btn-secondary" onclick="location.href='find_employees.html'">Logout</button>
+                </div>
+                <!-- Shown on Mobile -->
+                <div class="btn-burger" id="btn-burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> 
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Find Employees Header -->
+        <div class="container">
+            <div class="find-employees-header">
+                <div class="find-employees-header__container__after-login">
+                    <h2>Lets Start To Hire Employees!</h2>
+                    <p>You can select the category and type of specialist services in the filters</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services block -->
+        <div class="cabinet__content-block">
+            <div class="container">
+                <div id="filterSection">
+                    <h4>Select services</h4>
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter" onchange="filterServices()">
+                        <option value="all">All categories</option>
+
+                        <option value="web">Web-development</option>
+                        <option value="design">Design</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                    <label for="subcategoryFilter">Service</label>
+                    <select id="subcategoryFilter" onchange="filterServices()">
+                        <option value="all">All services</option>
+
+                        <option value="frontend">Frontend</option>
+                        <option value="backend">Backend</option>
+                        <option value="graphic">Graphic design</option>
+                        <option value="seo">SEO</option>
+                    </select>
+
+                    <a class="btn-history" onclick="popup.renderPopupHistory()">Order History</a>
+                    
+                </div>
+    
+
+                <ul id="servicesList">
+                <!-- Услуги будут добавлены здесь через JavaScript -->
+                </ul>
+            </div>
+
+            <div id="orderBlock">
+                <button class="btn-main">Order now</button>
+            </div>    
+
+        </div>
+
+    </main>
+    <footer>
+        <!-- Footer -->
+         <div class="container">
+            <div class="footer">
+                <div class="footer__links">
+                    <a href="index.html" class="footer__links__logo"><img src="images/Logo.svg"></img></a>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="find_employees.html">Find Employees</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="policy.html">Policy</a></li>
+                    </ul>
+
+                    <div class="footer__social-media">
+                        <a href="#"><img src="images/icon_linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="images/icon_twitter.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="images/icon_facebook.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="footer__info">
+                    <p>777-777-77-77</p>
+                    <p>LLC2327 Washington St Apt 3c <br>
+                        Hollywood<br>
+                        FL 33020</p>
+
+                    <span>2024 © Expert Talents. All rights reserved.</span>
+                </div>
+            </div>
+         </div>
+    </footer>
+    
+    <script src="Components/Popup.js"></script>
+    <script src="scripts/services.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

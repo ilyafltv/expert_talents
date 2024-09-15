@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Talents</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+    <!-- Popup loading with script(Components/Popup.js) -->
+    <div class="popup popup-closed" id="popup"></div>
+
+    <header>    
+        <!-- Menu -->
+        <div class="container">
+            <nav class="header__navbar">
+                <ul>
+                    <li class="header__navbar__logo"><a href="index.html"><img src="images/Logo.svg"></img></a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="find_employees.html">Find Employees</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+
+                <div class="header__navbar__buttons">
+                    <button class="btn-secondary" onclick="popup.renderPopupLogin()">Login</button>
+                    <button class="btn-main" onclick="popup.renderPopupRegistration()">Sign Up</button>
+                </div>
+                <!-- Shown on Mobile -->
+                <div class="btn-burger" id="btn-burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> 
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Cover Block -->
+        <div class="container">
+            <div class="cover-block">
+                
+                <h1 class="cover-block__black-title">Find New<br>Experts</h1>
+                <img class="cover-block__arrow-img" src="images/header-arrow-img.svg">
+                <div class="cover-block__string">
+                    <a class="cover-block__btn" href="find_employees.html"><img src="images/header-arrow-btn.svg" alt="Start Now"></a>
+                    <h1 class="gradient-title">Boost Your<br>Business</h1>
+                </div>
+
+            </div>
+        </div>
+        <!-- About Us -->
+        <div class="container">
+            <div class="about-us">
+                
+                <div class="about-us__card about-us__card__about">
+                    <p class="about-us__card__about__title">About Us</p>
+                    <h4>Learn more about Expert Talents</h4>
+                    <p>We recruit and provide employees in many areas. Expert Talents provides verified and certified specialists.</p>
+                    <button class="btn-main" onclick="location.href='find_employees.html'">Learn more</button>
+                </div>
+
+                <div class="about-us__card about-us__card__start about-us__card__center">
+                    <h3>Delegate work<br>
+                        to specialists</h3>
+                    <button class="btn-black" onclick="popup.renderPopupRegistration()">Start now</button>
+
+                    <img class="about-us__card__start__image mobile-hidden" src="images/about-employees-desktop.png">
+                    <img class="about-us__card__start__image desktop-hidden" src="images/about-employees-mobile.png">
+                </div>
+
+                <div class="about-us__card mobile-hidden about-us__card__center about-us__card__outsourcing">
+                    <h4>Outsourcing with<br>
+                        Expert Talents</h4>
+                    <p>Our team carefully selects specialists to solve various problems.</p>
+                </div>
+
+                <div class="about-us__card mobile-hidden about-us__card__providing">
+                    <h4>Providing<br>
+                        professional<br>
+                        workers</h4>
+
+                    <img class="about-us__card__providing__image mobile-hidden" src="images/about-programmer.png">
+                </div> 
+
+                <div class="about-us__card about-us__card__center about-us__card__message">
+                    <h4>You can send us a<br>
+                        message</h4>
+                    <button class="btn-main" onclick="location.href='contacts.html'">Contact Us</button>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Advantages -->
+        <div class="container">
+            <div class="advantages">
+                <h3>We Provide<br>
+                    Quality And Reliability</h3>
+                <p class="subtitle">We take responsibility for the quality of our services</p>
+                <div class="advantages__cards">
+                    <div class="advantages__card">
+                        <img src="images/advantages_database.png">
+                        <h4>Largest Database</h4>
+                        <p>We have a huge database that contains detailed information about a large number of specialists from different fields.</p>
+                    </div>
+                    <div class="advantages__card">
+                        <img src="images/advantages_money.png">
+                        <h4>Saving Money</h4>
+                        <p>Correct selection of employees allows you to save company resources and improve the functioning of individual segments of the company.</p>
+                    </div>
+                    <div class="advantages__card">
+                        <img src="images/advantages_verified.png">
+                        <h4>Verified workers</h4>
+                        <p>Each specialist undergoes a verification procedure before starting cooperation with our service.</p>
+                    </div>
+                </div>
+                <button class="btn-secondary" onclick="location.href='find_employees.html'">Learn more</button>
+            </div>
+        </div> 
+        <!-- Quick Start -->
+        <div class="container">
+            <div class="quick-start">
+                <h3>A Quick <span class="gradient-title">Start!</span></h3>
+                <p class="subtitle"> Register and start recruiting highly qualified specialists with Expert Talents right now</p>
+                <button class="btn-main" onclick="popup.renderPopupRegistration()" >Cooperate</button>
+            </div>
+        </div>
+        <!-- Reviews -->
+        <div class="container">
+            <div class="reviews">
+                <div class="slider-header">
+                    <h3>What Our Clients Say!</h3>
+                    <div class="slider-arrows">
+                        <button id="prev" class="arrow">
+                        <img src="images/Control.svg" alt="Previous">
+                        </button>
+                        <button id="next" class="arrow">
+                        <img class="arrow-next" src="images/Control.svg" alt="Next">
+                        </button>
+                    </div>
+                    </div>
+                
+                    <div class="slider">
+                    <div class="slides">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <div class="review-container">
+                              <div class="review">
+                                <h4>Alex P.</h4>
+                                <p>I worked with Expert Talents to recruit employees for our startup, and I was extremely pleased with the result. A team of professionals quickly understood our requirements and proposed several candidates who fit perfectly into our team.</p>
+                              </div>
+                              <div class="avatar">
+                                <img src="images/reviews_avatar.png" alt="Client 1">
+                              </div>
+                            </div>
+                          
+                            <div class="review-container">
+                              <div class="review">
+                                <h4>Anna M.</h4>
+                                <p>Expert Talents has helped us fill several key positions in our marketing department. The recruitment process went smoothly. I thank Expert Talents for the quality work and will definitely use them again in the future.</p>
+                              </div>
+                              <div class="avatar">
+                                <img src="images/reviews_avatar.png" alt="Client 2">
+                              </div>
+                            </div>
+                        </div>
+                
+                        <!-- Slide 2 -->
+                        <div class="slide mobile-hidden">
+                            <div class="review-container">
+                              <div class="review">
+                                <h4>Dmitry S.</h4>
+                                <p>Expert Talents did an excellent job finding highly qualified developers for our team. They understood our needs quickly and delivered great results in a short time. I highly recommend their services for any company looking for top talent.</p>
+                              </div>
+                              <div class="avatar">
+                                <img src="images/reviews_avatar.png" alt="Client 1">
+                              </div>
+                            </div>
+                          
+                            <div class="review-container">
+                              <div class="review">
+                                <h4>Olga P.</h4>
+                                <p>Thanks to Expert Talents, we found creative designers for our rebranding. The process was smooth and fast. Great service!</p>
+                              </div>
+                              <div class="avatar">
+                                <img src="images/reviews_avatar.png" alt="Client 2">
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- Footer -->
+         <div class="container">
+            <div class="footer">
+                <div class="footer__links">
+                    <a href="index.html" class="footer__links__logo"><img src="images/Logo.svg"></img></a>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="find_employees.html">Find Employees</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="policy.html">Policy</a></li>
+                    </ul>
+
+                    <div class="footer__social-media">
+                        <a href="#"><img src="images/icon_linkedin.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="images/icon_twitter.svg" alt="LinkedIn"></a>
+                        <a href="#"><img src="images/icon_facebook.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="footer__info">
+                    <p>777-777-77-77</p>
+                    <p>LLC2327 Washington St Apt 3c <br>
+                        Hollywood<br>
+                        FL 33020</p>
+
+                    <span>2024 © Expert Talents. All rights reserved.</span>
+                </div>
+            </div>
+         </div>
+    </footer>
+
+    <script src="Components/Popup.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

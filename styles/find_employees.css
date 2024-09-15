@@ -1,0 +1,291 @@
+/* Root styles */
+:root{
+    --color-light: #FFFFFF; 
+    --color-dark: #2C2D2C;
+    --color-dim: #F7F7F7;
+    --gradient-accent: linear-gradient(90deg, rgba(83,208,62,1) 0%, rgba(0,217,152,1) 100%);
+
+    --font-size-main: 16px;
+    --font-size-h1: 96px;
+    --font-size-h2: 64px;
+    --font-size-h3: 36px;
+    --font-size-h4: 24px;
+
+    --font-weight-main: 400;
+    --font-weight-light: 300;
+    --font-weight-medium: 500;
+    --font-weight-semi: 600;
+}
+/* Find Employees Header */
+.find-employees-header h2 {
+    margin-bottom: 20px;
+}
+.find-employees-header__container {
+    text-align: center;
+    max-width: 480px;
+    margin: 50px auto 90px;
+}
+.find-employees-header p {
+    margin-bottom: 30px;
+}
+/* Pluses */
+.pluses {
+    padding-bottom: 90px;
+}
+.pluses h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.pluses__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+}
+.pluses__card {
+    text-align: center;
+    max-width: 195px;
+}
+/* Specialists */
+.specialists {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.specialists p, .specialists h3 {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.specialists__cards {
+    justify-content: space-between;
+    display: flex;
+}
+.specialists__card {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 14px;
+    background-color: var(--color-light);
+    padding: 30px 30px 40px;
+    width: 32%; 
+    margin-bottom: 30px;
+
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+}
+.specialists__card p {
+    margin-bottom: 90px;
+}
+.specialists__card img{
+    margin-bottom: 20px;
+    border-radius: 7px;
+    width: 100%;
+}
+.specialists__card button {
+    width: 172px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform:translate(-50%);
+}
+/* After login */
+.header__navbar__buttons span {
+    margin-right: 15px;
+}
+.find-employees-header__container__after-login {
+    max-width: 500px;
+    text-align: center;
+    margin: 40px auto 50px;
+}
+.find-employees-header__container__after-login p{
+    margin-bottom: 0px;
+}
+.cabinet__content-block{
+    padding: 0px;
+}
+.cabinet__content-block .container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+}
+.cabinet__content-block h4{
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.btn-history {
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: var(--gradient-accent);
+
+    margin: 10px auto 0;
+}
+#filterSection select {
+    width: 100%;
+    margin-bottom: 20px;
+}
+#filterSection {
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px 40px 40px;
+
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-light);
+}
+#filterSection label {
+    margin-bottom: 5px;
+}
+.service-item {
+    margin-top: 30px;
+    display: none;
+    list-style-type: none;
+
+    padding: 8px 0 8px 20px;
+}
+.service-item.active {
+    color: var(--color-dark);
+    background: var(--gradient-accent);
+    font-weight: var(--font-weight-medium);
+    border-radius: 7px;
+    opacity: 1;
+    padding-right: 10px;
+}
+
+.category-item {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-main) !important;
+    color: var(--color-dark);
+    opacity: 1;
+    border-radius: 0;
+    margin-bottom: 0px;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 8px;
+    padding-left: 0px;
+    font-weight: bold;
+    border-top: 1px solid #D5D5D5;
+}
+.category-item:first-child {
+    border-top: none;
+    margin-top: 0;
+}
+.subcategory-item {
+    cursor: pointer;
+    color: var(--color-dark);
+    font-size: var(--font-size-main);
+    font-weight: var(--font-weight-main);
+    opacity: 0.8;
+    margin: 10px 0 10px 0px;
+}
+#servicesList{
+    padding-bottom: 90px;
+    width: 100%;
+    margin-left: 24px;
+    box-sizing: border-box;
+    background-color: var(--color-light);
+    border-radius: 14px;
+    padding: 0px 40px 40px;
+
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.05);
+}
+/* Order button */
+#orderBlock {
+    z-index: 100;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: var(--color-light);
+    -webkit-box-shadow: 0px 2px 14px 3px rgba(44, 44, 44, 0.07);
+    -moz-box-shadow: 0px 2px 14px 3px rgba(44, 44, 44, 0.07);
+    box-shadow: 0px 2px 14px 3px rgba(44, 44, 44, 0.07);
+    justify-content: center;
+    align-items: center;
+  }
+#orderBlock button {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+}
+@media (max-width: 991px) {
+    :root {
+        --font-size-h1: 58px;
+        --font-size-h2: 46px;
+    }
+    .pluses {
+        padding-bottom: 60px;
+    }
+    .pluses h3 {
+        margin-bottom: 30px;
+    }
+    .pluses__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .specialists__cards {
+        flex-direction: column;
+    }
+    .specialists__card {
+        width: 100%;
+    }
+    .specialists__card img {
+        width: 60%;
+    }
+    .find-employees-header__container {
+        margin: 30px auto 90px;
+    }
+    /* After login */
+    .header__navbar__buttons span {
+        margin: 0 auto 20px;
+    }
+    #servicesList{
+        padding-bottom: 60px;
+    }    
+}
+@media (max-width: 767px) {
+    .cabinet__content-block .container {
+        flex-direction: column;
+    }
+    #filterSection {
+        box-sizing: border-box;
+        max-width: 100% !important;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #servicesList{ 
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 575px) {
+    .pluses__cards {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    .specialists__card img {
+        width: 100%;
+    }
+    #filterSection {
+        padding: 30px 20px 40px;
+    }
+    #servicesList{ 
+        padding: 0 20px 40px;
+    }
+    
+}
+@media (max-width: 340px) {
+    .find-employees-header h2 {
+        font-size: 40px;
+    }
+}
